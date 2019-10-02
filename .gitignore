@@ -57,7 +57,8 @@ target/
 errors.txt
 */tmp/*
 log.txt
-*/game/saves/
+game/saves/
+game/cache/
 traceback.txt
 project.json
 ENV/
