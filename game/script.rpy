@@ -9,15 +9,20 @@ define d = Character("Demon")
 
 
 
+
 # The game starts here.
 
 label start:
+    #choice variables for tracking
+    $ tinder = True
+    $ texts = True
+    $ email = True
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene background1
 
     "You sit on your couch, legs propped up on your coffee table."
     "Through your window, the sky burns orange as the sun tucks itself behind the treeline."
@@ -28,16 +33,45 @@ label start:
     "You have no new notifications"
 
     menu:
-        "Open Tinder":
+        "Open Tinder" if tinder:
+            $tinder = False
             jump tinder
 
-        "Open Messages":
+        "Open Messages" if texts:
+            $texts = False
             jump messages
 
-        "Open Email":
+        "Open Email" if email:
+            $email = False
             jump email
 
+
     label tinder:
+    "The application takes several, irritating seconds to open."
+    label jackson:
+    "Jackson \n{i}Compassionate and caring. Loves theater, music, and dancing. Bartender. ENFP if you care about that sort of thing.{/i}"
+    menu:
+        "Swipe left":
+            jump ash
+        "Swipe right":
+            jump ash
+    label ash:
+    "Ash \n{i}Sometimes I garden, sometimes I protest ICE. Trying to meet someone else who has seen Space Ghost Coast to Coast.{/i}"
+    menu:
+        "Swipe left":
+            jump newt
+        "Swipe right":
+            jump newt
+    label newt:
+    "Newt \n{i}just looking for the \"u\" to my \"wu\"{/i}"
+    menu:
+        "Swipe left":
+            "You realize that fifteen minutes have passed and sigh."
+            jump phone
+        "Swipe right":
+            "You realize that fifteen minutes have passed and sigh."
+            jump phone
+
 
     label messages:
         "You have a text from your mother left on 'read.'"
@@ -49,19 +83,14 @@ label start:
 
 
     label email:
-        "Are you having trouble in the bedroom?
-        8 Timeless Skills to Learn Now
-        Make the Most of Your Money."
-        "Our Top 20 List of Tops. Number 5 will surprise you.
-        steps to summon demons for fiery pleasure.
-        Fares from $79 one-way? Let’s shake on it."
-        "TD Bank - Your online Bank Statement Is Available
-        Capital One - Your payment is due."
+        "Are you having trouble in the bedroom? \n8 Timeless Skills to Learn Now \nMake the Most of Your Money."
+        "Our Top 20 List of Tops. Number 5 will surprise you. \nsteps to summon demons for fiery pleasure. \nFares from $79 one-way? Let’s shake on it."
+        "TD Bank - Your online Bank Statement Is Available. \nCapital One - Your payment is due."
         "WAIT!..."
         "...pleasure..."
         "with demons?!"
         menu:
-            "Open 'steps to summon demons for fiery pleasure'":
+            "Open \"steps to summon demons for fiery pleasure\"":
                 "After reading the instructions, you scrounge around your apartment and collect several materials."
                 jump ritual
 
