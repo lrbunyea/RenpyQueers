@@ -189,8 +189,12 @@ label start:
         y "... Heed my call and arise from the depths of the fiery pit."
         "You finish...."
         play music "sounds/demonmusic.ogg"
+
+        scene background10
+        with dissolve
+
         "The smell of sulfur suffocates you, and you see thick, black smoke filling your circle."
-        #bg scene change & demon appears
+        #demon appears
         "A shadowy figure ascends, shrouded in the black clouds."
 
         d "Greedy mortal, thou has disrupted \nmy time in the infernal depths. \nTell me, what is it thine purpose, \nto summon me into thine realm?..."
@@ -262,15 +266,23 @@ label start:
         y "Obey these desires \nBefore freedom"
         d "Though I come from the under realm \nMy body is my own \nThine words I quell, \nThine ignorance hath shown."
         y "..."
+        stop music fadeout 2.0
         d "Okay, I've kept up this prose bullshit for this long, and you still don't get the message. I don't want to have sex with you. Fuck off. Keep your soul, we don't need gross assholes like you in hell."
+        play music "sounds/grossmusic.ogg" fadein 1.0
         "The demon recedes into the circle, quickly followed by the smoke."
         "You stand motionless as the smoke dissipates into the air."
         "You chide your fingers, and take a deep gulp."
         #new salt pile bg?
         "You pick up your broom and begin to sweep the salt into several manageable piles as you process the exchange."
-        #check phone background
+
+        scene background11
+        with dissolve
+
         "You reach for your phone. The battery is dead."
-        #fade to black here
+
+        scene backgroundblack
+        with dissolve
+
         "You are alone in a dark room."
         return
 
@@ -283,9 +295,14 @@ label start:
         y "But mine are steel \nMy promises gold-plated"
         d "Words are cheap, actions louder. \nShow thine sincerity."
         y "Boiled water and tea bags \nConservations clothed \nIn curiosity."
+        stop music fadeout 2.0
         y "Start again \nWith me."
+        play music "sounds/apologymusic.ogg"
         d "I do enjoy a nice cup of Chamomile. "
         "The small crystals tickle your foot as you create an opening in your salt circle."
-        #chair bg here
+
+        scene background12
+        with dissolve
+
         "You pull out a chair from the kitchen table and invite the demon to sit if he wishes."
         return
