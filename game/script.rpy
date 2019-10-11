@@ -28,9 +28,14 @@ label start:
     "Through your window, the sky burns orange as the sun tucks itself behind the treeline."
     "You chew absentmindedly on your bottom lip as you reach for your phone."
 
+    scene background2
+    with dissolve
+
     "Your phone screen shines bright."
     label phone:
-    "You have no new notifications"
+    scene background3
+    with dissolve
+    "You have no new notifications."
 
     menu:
         "Open Tinder" if tinder:
@@ -92,12 +97,28 @@ label start:
         menu:
             "Open \"steps to summon demons for fiery pleasure\"":
                 "After reading the instructions, you scrounge around your apartment and collect several materials."
+                scene background5
+                with dissolve
+                $renpy.pause(2.0)
+                scene background6
+                with dissolve
+                $renpy.pause(2.0)
+                scene background7
+                with dissolve
+                $renpy.pause(2.0)
+                scene background8
+                with dissolve
+                $renpy.pause(2.0)
                 jump ritual
 
     label ritual:
+        scene background4
+        with dissolve
         "You begin by sweeping the floor of your living room. You can't believe how much dust has accumulated since the last time you swept."
         "Depression sucks."
         "You sprinkle a large circle of salt around the room."
+        scene background9
+        with dissolve
         "It's not perfect, but you tried you gave it your best effort."
         "You turn your attention to the items you scavenged from around your home to use to call the corners."
     label easternGate:
