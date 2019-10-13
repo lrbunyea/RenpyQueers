@@ -82,9 +82,14 @@ label start:
 
 
     label email:
-        "Are you having trouble in the bedroom? \n8 Timeless Skills to Learn Now \nMake the Most of Your Money."
-        "Our Top 20 List of Tops. Number 5 will surprise you. \nsteps to summon demons for fiery pleasure. \nFares from $79 one-way? Let’s shake on it."
-        "TD Bank - Your online Bank Statement Is Available. \nCapital One - Your payment is due."
+        "Are you having trouble in the bedroom?
+        \n8 Timeless Skills to Learn Now
+        \nMake the Most of Your Money."
+        "Our Top 20 List of Tops. Number 5 will surprise you.
+        \nTD Bank - Your online Bank Statement Is Available"
+        "Fares from $79 one-way? Let’s shake on it.
+        \nsteps to summon demons for fiery pleasure.
+        \nCapital One - Your payment is due."
         "WAIT!..."
         "...pleasure..."
         "with demons?!"
@@ -131,12 +136,28 @@ label start:
         "What will you use to call the Eastern Gates, the Winds of Imagination?"
         menu:
             "A goose feather taken from your pillow":
+                show feather
+                with dissolve
+                $renpy.pause(2.0)
+                hide feather
                 jump southernGate
             "A plastic recorder you won as an arcade prize":
+                show recorder
+                with dissolve
+                $renpy.pause(2.0)
+                hide recorder
                 jump southernGate
             "A pinwheel you got at Pride":
+                show pinwheel
+                with dissolve
+                $renpy.pause(2.0)
+                hide pinwheel
                 jump southernGate
-            "A punctured milar balloon that reads “It’s a Boy”":
+            "A USB fan you unplugged from your laptop":
+                show fan
+                with dissolve
+                $renpy.pause(2.0)
+                hide fan
                 jump southernGate
             #need item to appear
 
@@ -145,12 +166,30 @@ label start:
         "What will you use to call the Southern Gates, the Fires of Passion?"
         menu:
             "A candle from your bathroom":
+                show candle
+                with dissolve
+                $renpy.pause(2.0)
+                hide candle
                 jump westernGate
             "A bottle of Sriracha... It's probably still fresh...":
+                show sriracha
+                with dissolve
+                $renpy.pause(2.0)
+                hide sriracha
                 jump westernGate
             "Your most recent mixtape that you named “Fire on the Dance Floor”":
+                image tape = "mixTape.png"
+                show tape
+                with dissolve
+                $renpy.pause(2.0)
+                hide tape
                 jump westernGate
             "A comfort lighter you dug up from your kitchen drawer":
+                image lighter = "comfortLighter.png"
+                show comfortLighter
+                with dissolve
+                $renpy.pause(2.0)
+                hide comfortLighter
                 jump westernGate
             #need item to appear
 
@@ -159,12 +198,30 @@ label start:
         "What will you use to call the Western Gates, the Waters of Intuition?"
         menu:
             "A snorkle":
+                show snorkle
+                with dissolve
+                $renpy.pause(2.0)
+                hide snorkle
                 jump northernGate
             "A nautalus shell from your visit to the cape":
+                show conch
+                with dissolve
+                $renpy.pause(2.0)
+                hide conch
                 jump northernGate
             "A bowl of water with “Sparky” written on the side":
+                image bowl = "dogBowl.png"
+                show bowl
+                with dissolve
+                $renpy.pause(2.0)
+                hide bowl
                 jump northernGate
             "Your neti pot":
+                image neti = "netiPot.png"
+                show neti
+                with dissolve
+                $renpy.pause(2.0)
+                hide neti
                 jump northernGate
             #need item to appear
 
@@ -173,12 +230,28 @@ label start:
         "What will you use to call the Northern gates, the Grounds of Work?"
         menu:
             "A ring your good friend, Sonya gave to you, she says it’s real onyx":
+                show ring
+                with dissolve
+                $renpy.pause(2.0)
+                hide ring
                 jump summon
             "A succulent plant potted in soil":
+                show succulent
+                with dissolve
+                $renpy.pause(2.0)
+                hide succulent
                 jump summon
             "Coffee grounds from your morning brew":
+                show coffee
+                with dissolve
+                $renpy.pause(2.0)
+                hide coffee
                 jump summon
             "A rock, what? You thought it looked cool.":
+                show rock
+                with dissolve
+                $renpy.pause(2.0)
+                hide rock
                 jump summon
             #need item to appear
 
@@ -195,6 +268,8 @@ label start:
 
         "The smell of sulfur suffocates you, and you see thick, black smoke filling your circle."
         #demon appears
+        image smoke = im.FactorScale("demon-smoke.png", .5)
+        show smoke
         "A shadowy figure ascends, shrouded in the black clouds."
 
         d "Greedy mortal, thou has disrupted \nmy time in the infernal depths. \nTell me, what is it thine purpose, \nto summon me into thine realm?..."
