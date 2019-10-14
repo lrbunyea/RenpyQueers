@@ -377,7 +377,10 @@ label start:
         stop music fadeout 2.0
         y "Start again \nWith me."
         play music "sounds/apologymusic.ogg"
-        d "I do enjoy a nice cup of Chamomile. "
+        show demoncloudreduced
+        hide demoncloud
+        with dissolve
+        d "I do enjoy a nice cup of Chamomile."
         "The small crystals tickle your foot as you create an opening in your salt circle."
 
         scene background12
