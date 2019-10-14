@@ -136,6 +136,7 @@ label start:
         "What will you use to call the Eastern Gates, the Winds of Imagination?"
         menu:
             "A goose feather taken from your pillow":
+                image feather = im.FactorScale("feather.png", .5)
                 show feather
                 with dissolve
                 $renpy.pause(2.0)
@@ -186,10 +187,10 @@ label start:
                 jump westernGate
             "A comfort lighter you dug up from your kitchen drawer":
                 image lighter = "comfortLighter.png"
-                show comfortLighter
+                show lighter
                 with dissolve
                 $renpy.pause(2.0)
-                hide comfortLighter
+                hide lighter
                 jump westernGate
             #need item to appear
 
@@ -268,8 +269,9 @@ label start:
 
         "The smell of sulfur suffocates you, and you see thick, black smoke filling your circle."
         #demon appears
-        image smoke = im.FactorScale("demon-smoke.png", .5)
-        show smoke
+        #image smoke = im.FactorScale("demoncloud.png")
+        show demoncloud
+        with dissolve
         "A shadowy figure ascends, shrouded in the black clouds."
 
         d "Greedy mortal, thou has disrupted \nmy time in the infernal depths. \nTell me, what is it thine purpose, \nto summon me into thine realm?..."
@@ -345,6 +347,8 @@ label start:
         d "Okay, I've kept up this prose bullshit for this long, and you still don't get the message. I don't want to have sex with you. Fuck off. Keep your soul, we don't need gross assholes like you in hell."
         play music "sounds/grossmusic.ogg" fadein 1.0
         "The demon recedes into the circle, quickly followed by the smoke."
+        hide demoncloud
+        with dissolve
         "You stand motionless as the smoke dissipates into the air."
         "You chide your fingers, and take a deep gulp."
         #new salt pile bg?
