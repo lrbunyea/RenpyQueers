@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("RenpyQueers")
+define config.name = _("OnMyTerms")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -30,6 +30,11 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+A game lovingy developed by Bound and Tucked Studios.
+
+CREDITS
+\nMichael DeAnda
+\nLeo Bunyea
 """)
 
 

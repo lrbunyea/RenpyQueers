@@ -4,6 +4,15 @@
 define y =Character("You")
 define d =Character("Demon", who_font="fonts/JFS.ttf", what_font="fonts/JFS.ttf")
 
+label splashscreen:
+    scene splash_screen
+    with dissolve
+    with Pause(2)
+    scene black
+    with dissolve
+    with Pause(0.1)
+    return
+
 # The game starts here.
 label start:
     #choice variables for tracking what players have seen
@@ -11,7 +20,14 @@ label start:
     $ texts = True
     $ email = True
 
+    scene black
+    with dissolve
+    show text "Content Warning: This game depicts an uncomfortable sexual situation. Please take care of yourself."
+    with Pause(4)
+    hide text with dissolve
+
     scene background1
+    with dissolve
 
     "You sit on your couch, legs propped up on your coffee table."
     "Through your window, the sky burns orange as the sun tucks itself behind the treeline."
@@ -82,14 +98,9 @@ label start:
 
 
     label email:
-        "Are you having trouble in the bedroom?
-        \n8 Timeless Skills to Learn Now
-        \nMake the Most of Your Money."
-        "Our Top 20 List of Tops. Number 5 will surprise you.
-        \nTD Bank - Your online Bank Statement Is Available"
-        "Fares from $79 one-way? Let’s shake on it.
-        \nsteps to summon demons for fiery pleasure.
-        \nCapital One - Your payment is due."
+        "Are you having trouble in the bedroom \n8 Timeless Skills to Learn Now \nMake the Most of Your Money."
+        "Our Top 20 List of Tops. Number 5 will surprise you. \nTD Bank - Your online Bank Statement Is Available"
+        "Fares from $79 one-way? Let’s shake on it. \nsteps to summon demons for fiery pleasure. \nCapital One - Your payment is due."
         "WAIT!..."
         "...pleasure..."
         "with demons?!"
@@ -136,125 +147,116 @@ label start:
         "What will you use to call the Eastern Gates, the Winds of Imagination?"
         menu:
             "A goose feather taken from your pillow":
-                image feather = im.FactorScale("feather.png", .5)
-                show feather
+                show feather at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
-                hide feather
+                hide feather at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 jump southernGate
             "A plastic recorder you won as an arcade prize":
-                show recorder
+                show recorder at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide recorder
                 jump southernGate
             "A pinwheel you got at Pride":
-                show pinwheel
+                show pinwheel at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide pinwheel
                 jump southernGate
             "A USB fan you unplugged from your laptop":
-                show fan
+                show fan at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide fan
                 jump southernGate
-            #need item to appear
 
 
     label southernGate:
         "What will you use to call the Southern Gates, the Fires of Passion?"
         menu:
             "A candle from your bathroom":
-                show candle
+                show candle at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide candle
                 jump westernGate
             "A bottle of Sriracha... It's probably still fresh...":
-                show sriracha
+                show sriracha at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide sriracha
                 jump westernGate
-            "Your most recent mixtape that you named “Fire on the Dance Floor”":
-                image tape = "mixTape.png"
-                show tape
+            "Your most recent mixtape that you named \"Fire on the Dance Floor\"":
+                show tape at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide tape
                 jump westernGate
             "A comfort lighter you dug up from your kitchen drawer":
-                image lighter = "comfortLighter.png"
-                show lighter
+                show lighter at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide lighter
                 jump westernGate
-            #need item to appear
 
 
     label westernGate:
         "What will you use to call the Western Gates, the Waters of Intuition?"
         menu:
             "A snorkle":
-                show snorkle
+                show snorkle at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide snorkle
                 jump northernGate
             "A nautalus shell from your visit to the cape":
-                show conch
+                show conch at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide conch
                 jump northernGate
             "A bowl of water with “Sparky” written on the side":
-                image bowl = "dogBowl.png"
-                show bowl
+                show bowl at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide bowl
                 jump northernGate
             "Your neti pot":
-                image neti = "netiPot.png"
-                show neti
+                show neti at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide neti
                 jump northernGate
-            #need item to appear
 
 
     label northernGate:
         "What will you use to call the Northern gates, the Grounds of Work?"
         menu:
             "A ring your good friend, Sonya gave to you, she says it’s real onyx":
-                show ring
+                show ring at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide ring
                 jump summon
             "A succulent plant potted in soil":
-                show succulent
+                show succulent at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide succulent
                 jump summon
             "Coffee grounds from your morning brew":
-                show coffee
+                show coffee at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide coffee
                 jump summon
-            "A rock, what? You thought it looked cool.":
-                show rock
+            "A rock... What? You thought it looked cool.":
+                show rock at Position(xpos = 0.5, xanchor = 0.5, ypos = 0.5, yanchor = 0.5)
                 with dissolve
                 $renpy.pause(2.0)
                 hide rock
                 jump summon
-            #need item to appear
 
     #IMPORTANT NOTE: With the font and size, for PC, only print up to three lines at a time. For the demon only print 4. Otherwise it gets cut off.
     label summon:
@@ -268,8 +270,6 @@ label start:
         with dissolve
 
         "The smell of sulfur suffocates you, and you see thick, black smoke filling your circle."
-        #demon appears
-        #image smoke = im.FactorScale("demoncloud.png")
         show demoncloud
         with dissolve
         "A shadowy figure ascends, shrouded in the black clouds."
@@ -351,7 +351,6 @@ label start:
         with dissolve
         "You stand motionless as the smoke dissipates into the air."
         "You chide your fingers, and take a deep gulp."
-        #new salt pile bg?
         "You pick up your broom and begin to sweep the salt into several manageable piles as you process the exchange."
 
         scene background11
